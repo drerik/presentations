@@ -212,7 +212,7 @@ Challenge accepted!
 
 ## File/storage/dev access
 
-- Make shure the user in the container has access to the files ( uid mapping )
+- Make sure the user in the container has access to the files ( uid mapping )
 
 ---
 
