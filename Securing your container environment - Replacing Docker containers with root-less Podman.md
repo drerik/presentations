@@ -70,7 +70,8 @@ Simplified:
 
 - Client <=> Server/service architecture
 - The service is running as root
-- To manage a docker container, users either have to use sudo or gets added to the `docker` group.
+- To manage a docker container, users either have to use sudo or they need to be added to the
+`docker` group.
 
 ```bash
 erik@erik13:~$ ps aux | grep dockerd
@@ -83,7 +84,7 @@ erik@erik13:~$
 
 ## Is running Docker as root a problem?
 
-As a regular user i can gain access to protected files.
+As a regular user I can gain access to protected files.
 
 ```bash
 docker run -it --rm \
@@ -95,18 +96,18 @@ docker run -it --rm \
 
 ---
 
-## But is this realy a problem?
+## But is this really a problem?
 
 "Nobody can access my docker service or server"
 
-"My servers security is hackerproof! nobody can gain access to it!"
+"My server's security make my server hackerproof! Nobody can gain access to it!"
 
 ---
 
 ## Yes, it can be/is a problem!
 
 - First rule of security: Never have just one layer of security.
-- If someone gains access to the docker service, they own your server.
+- If someone gain access to the docker service, they own your server.
 - If "they" can manipulate the creation of a container, they own the server.
 - It's easy to expose the docker service as a network service.
 - People make mistakes
@@ -127,7 +128,7 @@ docker run -it --rm \
 
 ## Can we run docker rootless?
 
-Yes, but needs modification/configuration.
+Yes, but need modification/configuration.
 
 Limits:
 - storage drivers
@@ -162,9 +163,9 @@ Limits:
 
 ---
 
-## Whats the catch with rootless containers?
+## What's the catch with rootless containers?
 
-Yes there are som disadvantages..
+Yes there are some disadvantages..
 
 ---
 
@@ -176,7 +177,7 @@ Yes there are som disadvantages..
 
 ## File access
 
-- Container does not have access to "all" files ( because your are not running it as root ).
+- The container does not have access to "all" files ( because your are not running it as root ).
 - You might get errors around using "special" filesystems life nfs/smb etc.
 
 ---
@@ -205,7 +206,7 @@ Challenge accepted!
 
 ## Reverse proxy/load balancer service
 
-- Install a loadballancer ( haproxy ) on server and route traffic to "correct" port.
+- Install a loadbalancer ( haproxy ) on server and route traffic to "correct" port.
 - Seperate certificate or sensitive files away from the code in your container makes it unavailable for intruders.
 
 ---
@@ -243,7 +244,7 @@ $
 ```
 ---
 
-## What about other docker tools/commands i use?
+## What about other docker tools/commands I use?
 
 ---
 
